@@ -3,7 +3,7 @@ ROS 2 C++ package. [![Static Badge](https://img.shields.io/badge/ROS_2-Humble-34
 
 A package két node-ból áll. A `/lissajous_generator` node egy [Lissajous-görbén](https://hu.wikipedia.org/wiki/Lissajous-g%C3%B6rbe) mozgó célpontot szimulál, és annak pozícióját és haladási irányát `geometry_msgs/msg/PoseStamped` típusú üzenetként hirdeti a `/target_pose` topicban. A `/path_recorder` node feliratkozik erre a topicra, az utolsó *N* pózból `nav_msgs/msg/Path` típusú pályát épít, amit a `/trajectory` topicban hirdet (RViz2-ben megjeleníthető), valamint a megtett út hosszát `std_msgs/msg/Float32` típusként a `/travelled_distance` topicban. Megvalósítás `ROS 2 Humble` alatt.
 
-<p align="center"><img src="img/lissajous.svg" width="60%" /></p>
+<p align="center"><img src="img/image.png" width="60%" /></p>
 
 A görbe egyenlete:
 
