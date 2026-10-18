@@ -23,4 +23,11 @@ set(ament_dependencies
   nav_msgs
 )
 
+add_executable(lissajous_generator src/lissajous_generator.cpp)
+ament_target_dependencies(lissajous_generator ${ament_dependencies})
+
+install(TARGETS
+  lissajous_generator
+  DESTINATION lib/${PROJECT_NAME})
+
 ament_package()
