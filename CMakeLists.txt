@@ -26,8 +26,15 @@ set(ament_dependencies
 add_executable(lissajous_generator src/lissajous_generator.cpp)
 ament_target_dependencies(lissajous_generator ${ament_dependencies})
 
+add_executable(path_recorder src/path_recorder.cpp)
+ament_target_dependencies(path_recorder ${ament_dependencies})
+
+install(DIRECTORY launch rviz
+  DESTINATION share/${PROJECT_NAME})
+
 install(TARGETS
   lissajous_generator
+  path_recorder
   DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
